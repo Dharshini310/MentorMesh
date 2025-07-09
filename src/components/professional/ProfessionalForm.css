@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Layout: Form + Animation */
+
+/* Form Styling */
+.form {
+  min-width: 300px;
+  max-width: 500px;
+  padding: 2rem;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs and textarea */
+.form-input,
+.exp {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+/* Textarea */
+.exp {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Placeholder styling */
+::placeholder {
+  font-size: 1.1rem;
+  color: #033aa8;
+}
+
+/* Submit button */
+.form-button {
+  width: 100%;
+  background-color: #092b9c;
+  color: white;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: white;
+  color: #092b9c;
+  border: 2px solid #092b9c;
+}
+
+/* Animation container */
+.animation-block {
+  min-width: 300px;
+  max-width: 500px;
+}

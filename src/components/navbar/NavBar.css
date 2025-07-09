@@ -1,0 +1,69 @@
+.navbar {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  flex-wrap: nowrap;
+}
+
+.navbar li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navLeft ul,
+.navbar .navRight ul {
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navLeft #mentorMesh {
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 0px 0px 3px;
+  color: #092b9c;
+  display: flex;
+  align-items: center;
+}
+
+.navbar #search {
+  padding: 15px 10px;
+  border-radius: 30px;
+  width: 250px;
+}
+
+.navRight li {
+  font-size: 25px;
+  color: #092b9c;
+}
+
+.navRight li:hover {
+  cursor: pointer;
+  color: #3170de;
+}
+
+.navRight #getStarted {
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 40px;
+  background-color: #033aa8;
+  color: aliceblue;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+#getStarted:hover {
+  background-color: aliceblue;
+  color: #033aa8;
+  cursor: pointer;
+}

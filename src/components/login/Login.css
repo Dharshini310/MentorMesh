@@ -1,0 +1,93 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    border: 1px solid;
+    width: 60%;
+    margin: auto auto;
+    place-content: center;
+}
+
+.loginLeft {
+    flex: 1;
+}
+
+.loginRight {
+    flex: 1;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(253, 253, 253);
+}
+
+.loginLeft img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginRight #login {
+    padding: 30px;
+    color: rgb(24, 24, 114);
+}
+.loginRight .googleContinue {
+    width: 75%;
+   margin: 10px auto;
+   display: flex;
+   justify-content: center;
+}
+
+
+.googleContinue > div {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.loginRight .loginForm{
+    margin: 20px;
+    width: 100%;
+}
+
+.loginForm input {
+    display: block;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.loginRight .submitButton {
+    padding-bottom: 20px;
+    width: 75%;
+    margin: 0 auto;
+    
+}
+
+.submitButton button {
+    color: antiquewhite;
+    background-color: rgb(27, 27, 158);
+    padding: 10px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submitButton button:hover {
+    color: rgb(0, 0, 93);
+    font-weight:bold;
+    background-color: rgb(181, 181, 230);
+}
+
+.newAccount {
+   margin: 20px;
+}

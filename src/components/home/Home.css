@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Libertinus+Math&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.b_body {
+    background-color: rgb(243, 237, 230);
+    height: 100vh;
+    display:flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    place-items: center;
+}
+
+
+.b_body .bodyLeft {
+    margin: auto auto;
+}
+.b_body h1{
+    flex: 1;
+    display:block;
+    font-size: 100px;
+    text-align: right;
+    font-family: "Lora", serif;
+    color: #092b9c;
+}
+.b_body #para {
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: right;
+    color:#3170de;
+}
+.b_body img {
+    flex: 1;
+    width: 90%;
+    margin: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 40px;
+}
+.bodyLeft #getStart {
+    margin: 10px;
+    float: right;
+    padding: 20px 20px;
+    font-size:20px;
+    border-radius: 40px;
+    width: 270px;
+    background-color: #033aa8;
+    color: aliceblue;
+}
+
+#getStart:hover {
+    cursor: pointer;
+     background-color:aliceblue;
+    color: #033aa8;
+}
