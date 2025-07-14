@@ -1,0 +1,131 @@
+/* .app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.open-btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #092b9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.open-btn:hover {
+  background-color: #0644c7;
+} */
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dialog-content {
+  background-color: white;
+  width: 70%;
+  max-width: 40%;
+  max-height: 70%;
+  padding: 5% 4%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}
+
+.dialog-content h2 {
+  margin: 0;
+  color: #092b9c;
+  text-align: center;
+}
+
+.dialog-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dialog-content .googleContinue{
+  padding: 3%;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.dialog-content input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #033aa8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  left: 25%;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color:#033aa8;
+  border: 2px solid #033aa8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+text {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

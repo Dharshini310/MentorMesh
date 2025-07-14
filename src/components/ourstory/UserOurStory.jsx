@@ -1,24 +1,54 @@
 import { useEffect,useState } from 'react';
-import {NavLink} from "react-router-dom"
+import {NavLink, useNavigate} from "react-router-dom"
 import LoginPopup from '../login-popup/LoginPopup'; 
 import SigninPopUp from '../signin-popup/SigninPopUp';
 import './OurStory.css'
-function OurStory() {
+function UserOurStory() {
    const [loginOpen, setLoginOpen] = useState(false);
     const [signinOpen, setSigninOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+      const [email, setEmail] = useState('');
+      const navigate = useNavigate()
   
      const openLogin = () => setLoginOpen(true);
     const openSignin = () => setSigninOpen(true);
   useEffect(() => {
     document.body.style.backgroundColor = '#f1fdff';
   })
+   useEffect(() => {
+      document.body.style.backgroundColor = 'white';
+      const storedEmail = localStorage.getItem("userEmail");
+      if (storedEmail) {
+        setEmail(storedEmail);
+        setIsLoggedIn(true);
+      }
+    }, []);
+  
+    const handleLogout = () => {
+      localStorage.removeItem("userEmail");
+      setEmail('');
+      setIsLoggedIn(false);
+      navigate('/')
+    };
   return (
     <>
       <div className="ourstory-navbar">
         <h1 id='mentorMesh'>MentorMesh</h1>
         <div className="navbar-buttons">
-        <button id="button-1" onClick={openLogin}>Sign In</button>
-        <button id="button-2" onClick={openSignin}>Sign Up</button>
+        {isLoggedIn ? (
+                <button id='getStarted' style={{ cursor: "pointer" }}>
+                  {email}
+                </button>
+              ) : (
+                <button onClick={openLogin} id='getStarted'>
+                  Login
+                </button>
+              )}
+        {isLoggedIn && (
+                <button onClick={handleLogout} className="logout-btn">
+                  Logout
+                </button>
+            )}
         </div>
       </div>
       <div>
@@ -109,4 +139,4 @@ function OurStory() {
   );
 }
 
-export default OurStory;
+export default UserOurStory;

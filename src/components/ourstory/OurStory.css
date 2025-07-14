@@ -118,15 +118,18 @@
   display: flex;
   flex-direction: column;
   padding-top: 2%;
+  text-decoration: none;
 }
 .link li{
   border-bottom: 1px solid #033aa8;
   padding: 3%;
+  text-decoration: none;
 }
 .link li:hover{
   background-color: white;
   color: #092b9c;
   cursor: pointer;
+  text-decoration: none;
   .link-arrow{
     background-color: white;
     color: #092b9c;
@@ -138,4 +141,29 @@
   font-size: 2rem;
 }
 
+#getStarted {
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 40px;
+  background-color: #033aa8;
+  color: aliceblue;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+#getStarted:hover {
+  background-color: aliceblue;
+  color: #033aa8;
+  cursor: pointer;
+}
+
+
+.logout-btn {
+  background-color: transparent;
+  color: red;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
 

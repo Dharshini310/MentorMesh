@@ -1,0 +1,28 @@
+.aspriant-content ul{
+    display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  margin: 0;
+  list-style-type: none;
+}
+.aspriant-content #mentorMesh{
+    font-weight: bold;
+  font-size: 40px;
+  text-shadow: 0px 0px 3px;
+  color: #092b9c;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.aspriant-content #search {
+  padding: 15px 10px;
+  border-radius: 30px;
+  width: 250px;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+.aspriant-content :placeholder-shown{
+    text-align: left;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
