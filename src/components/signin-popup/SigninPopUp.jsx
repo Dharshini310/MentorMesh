@@ -3,6 +3,8 @@ import "../login-popup/LoginPopup.css";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
+import {toast} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 function SigninPopUp({ isOpen, onClose, onOpenLogin }) {
   const [email, setEmail] = useState("");
@@ -21,18 +23,18 @@ function SigninPopUp({ isOpen, onClose, onOpenLogin }) {
         confirm_password: confirmPassword.trim(),
       })
       .then((res) => {
-        alert("Signup Successful!");
+        toast.info("Signup Successful!");
         console.log(res.data);
-        onClose(); // close popup
-        onOpenLogin(); // redirect to login
+        onClose(); 
+        onOpenLogin(); 
       })
       .catch((err) => {
         if (err.response && err.response.status === 409) {
-          alert("User already exists!");
+          toast.info("User already exists!");
         } else if (err.response && err.response.status === 400) {
-          alert("Passwords do not match!");
+          toast.info("Passwords do not match!");
         } else {
-          alert("Something went wrong.");
+          toast.info("Something went wrong.");
         }
         console.log(err);
       })

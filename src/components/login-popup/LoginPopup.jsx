@@ -1,15 +1,18 @@
 import "./LoginPopup.css";
-
+import LoginSuccessfulPopup from "../datapopups/LoginSuccessfulPopup";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 function LoginPopup({ isOpen, onClose, onOpenSignin }) {
   if (!isOpen) return null;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    const [showSuccess, setShowSuccess] = useState(false);
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
@@ -18,16 +21,20 @@ function LoginPopup({ isOpen, onClose, onOpenSignin }) {
       .post("http://localhost:3000/mentormesh/login", { email, password })
       .then((result) => {
         console.log(result);
-        alert("Login Successful");
-         localStorage.setItem("userEmail", result.data.user.email); 
-        onClose(); // close popup
-        navigate('/user-homepage');
+         localStorage.setItem("userEmail", result.data.user.email);
+         onClose()
+         setShowSuccess(true) 
+         setTimeout(() => {
+          setShowSuccess(false);
+          toast.success("Login Successful")
+          navigate("/user-homepage"); 
+        }, 2000);
       })
       .catch((err) => {
         if (err.response && err.response.status === 409) {
-          alert("User already exists!");
+          toast.info("User already exists!");
         } else {
-          alert("Something went wrong. Try again.");
+          toast.error("Something went wrong. Try again.");
         }
       })
       .finally(() => {
@@ -37,6 +44,7 @@ function LoginPopup({ isOpen, onClose, onOpenSignin }) {
   };
 
   return (
+    <>
     <div className="dialog-overlay">
       <div className="dialog-content">
         <button className="close-btn" onClick={onClose}>
@@ -94,6 +102,10 @@ function LoginPopup({ isOpen, onClose, onOpenSignin }) {
         </form>
       </div>
     </div>
+     {showSuccess && (
+        <LoginSuccessfulPopup onClose={() => setShowSuccess(false)} />
+      )}
+    </>
   );
 }
 

@@ -29,8 +29,6 @@ const Home = () => {
           />
         </div>
       </div>
-
-      {/* Both Popups */}
       <SigninPopUp 
         isOpen={signinOpen} 
         onClose={() => setSigninOpen(false)} 

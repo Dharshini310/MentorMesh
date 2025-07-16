@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './NavBar.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import LoginPopup from '../login-popup/LoginPopup'; 
 import SigninPopUp from '../signin-popup/SigninPopUp';
+import { SearchContext } from '../../App';
 
 const UserNavbar = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -10,6 +11,7 @@ const UserNavbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
   const navigate = useNavigate()
+  const { searchTerm, setSearchTerm } = useContext(SearchContext)
 
   const openLogin = () => setLoginOpen(true);
   const openSignin = () => setSigninOpen(true);
@@ -37,7 +39,7 @@ const UserNavbar = () => {
           <ul>
             <li id='mentorMesh'>MentorMesh</li>
             <li>
-              <input placeholder='Search' id='search' />
+              <input placeholder='Search' id='search' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value.toLowerCase())} />
             </li>
           </ul>
         </div>
@@ -47,7 +49,7 @@ const UserNavbar = () => {
             <NavLink to={'/write'}><li>Add Experience</li></NavLink>
             <li>
               {isLoggedIn ? (
-                <button id='getStarted' style={{ cursor: "pointer" }}>
+                <button id='getStarted' style={{ cursor: "pointer" }} onClick={()=> navigate('/UserData')}>
                   {email}
                 </button>
               ) : (

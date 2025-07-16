@@ -9,7 +9,6 @@ function Login({ isOpen, isClose, openSignin }) {
   const navigate = useNavigate();
   const {setLogin} = useContext(themeContext);
 
-  // ✅ useEffect should always be called regardless of `isOpen`
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -17,21 +16,20 @@ function Login({ isOpen, isClose, openSignin }) {
       document.body.style.overflow = 'auto';
     }
 
-    // Cleanup
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
   const createOne = () => {
-    isClose(); // Close login
-    setTimeout(() => openSignin(), 200); // Open signup
+    isClose(); 
+    setTimeout(() => openSignin(), 200); 
   };
   const handleLogin = () => {
     setLogin(true);
   }
 
-  if (!isOpen) return null; // This conditional should only be used here
+  if (!isOpen) return null; 
 
   return (
     <>

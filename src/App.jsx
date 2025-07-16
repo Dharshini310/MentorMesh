@@ -13,11 +13,17 @@ import SigninPopUp from './components/signin-popup/SigninPopUp'
 import UserHomePage from './components/home/UserHomepage.jsx';
 import UserOurStory from './components/ourstory/UserOurStory.jsx';
 import { createContext } from "react";
+import FullyDetailedData from './components/home/FullyDetailedData.jsx';
+import { ToastContainer } from 'react-toastify';
+import UserData from './components/userProfile/UserData.jsx';
 
 export const MentorContext = createContext()
+export const SearchContext = createContext();
 function App() {
   const [loading, setLoading] = useState(true);
   const [AddExperience,setAddExperience] = useState([])
+  const [searchTerm, setSearchTerm] = useState('');
+ const [email, setEmail] = useState(localStorage.getItem("userEmail") || "");
 
 
   useEffect(() => {
@@ -34,7 +40,8 @@ function App() {
   }, []);
 
   return (
-    <MentorContext.Provider value={{AddExperience,setAddExperience}}>
+    <MentorContext.Provider value={{AddExperience,setAddExperience,email,setEmail}}>
+       <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
     <BrowserRouter>
       {loading ? (
         <Loader />
@@ -48,9 +55,23 @@ function App() {
           <Route path="/sign-in" element={<Login />} />
           <Route path="/get-started" element={<ProfessionalForm/>}/>
           <Route path='/signin' element={<SigninPopUp/>}/>
+          <Route path='/user-data' element={<FullyDetailedData/>}/>
+          <Route path='/UserData' element={<UserData/>}/>
         </Routes>
       )}
     </BrowserRouter>
+    <ToastContainer
+     position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"  />
+    </SearchContext.Provider>
     </MentorContext.Provider>
     // <>
     // <h1>POP UP</h1>

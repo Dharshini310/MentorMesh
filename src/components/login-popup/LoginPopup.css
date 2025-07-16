@@ -105,7 +105,7 @@
   border: 2px solid #033aa8;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

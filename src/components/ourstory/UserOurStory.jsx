@@ -34,22 +34,6 @@ function UserOurStory() {
     <>
       <div className="ourstory-navbar">
         <h1 id='mentorMesh'>MentorMesh</h1>
-        <div className="navbar-buttons">
-        {isLoggedIn ? (
-                <button id='getStarted' style={{ cursor: "pointer" }}>
-                  {email}
-                </button>
-              ) : (
-                <button onClick={openLogin} id='getStarted'>
-                  Login
-                </button>
-              )}
-        {isLoggedIn && (
-                <button onClick={handleLogout} className="logout-btn">
-                  Logout
-                </button>
-            )}
-        </div>
       </div>
       <div>
         <h3 id="our-story">⭐ Our Story – MentorMesh</h3>

@@ -31,11 +31,22 @@ const InterviewSchema = new mongoose.Schema({
     qaList : [{
         question : String,
         answers : [String]
-    }]
+    }],
+    likes: {
+      count: { type: Number, default: 0 },
+      users: [String] 
+    },
+    saves: [String],
 },{timestamps : true});
 
 const UserSchema = new mongoose.Schema({
+  image: { type: String },
+  name: { type: String },
+  role: { type: String },
   email: { type: String, required: true, unique: true },
+  phone: { type: String },
+  about: { type: String },
+  linkedin: { type: String },
   password: { type: String, required: true },
   interview: [InterviewSchema]
 }, {

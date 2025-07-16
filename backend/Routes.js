@@ -1,5 +1,5 @@
 const express = require("express");
-const { addLogin,  addUser, addInterviewExp,getData } = require("./usecontroller/UserController");
+const { addLogin,  addUser, addInterviewExp,getData, likes, save , addUserData, getUserDetails } = require("./usecontroller/UserController");
 
 const router = express.Router();
 
@@ -17,5 +17,13 @@ router.post('/signup', addUser);
 router.post('/addInterview',addInterviewExp)
 
 router.get('/all-interview-data', getData)
+
+router.post('/like',likes)
+
+router.post('/save',save)
+
+router.put('/addUserData',addUserData)
+
+router.get('/getUser', getUserDetails);
 
 module.exports = router;

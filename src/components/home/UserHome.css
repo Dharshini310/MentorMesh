@@ -1,0 +1,213 @@
+.experience-card{
+    border:2px solid #033aa8;
+    width: 40%;
+    text-align: left;
+    align-items: center;
+    margin-left: 25%;
+    border-radius: 10px;
+    color: black;
+    padding: 2%;
+    margin-bottom: 4%;
+}
+li{
+    list-style-type: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1.5rem;
+}
+#email{
+    position: relative;
+    left: 80%;
+    color: black;
+}
+#company-name{
+    color: black;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 2%;
+}
+#company-role{
+    color:black;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    padding: 2%;
+    font-weight: 400;
+}
+#company-year{
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding: 2%;
+    font-weight: 400;
+}
+#company-year span{
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 200;
+}
+#company-experience{
+    font-size: 1.4rem;
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 2%;
+    font-weight: 400;
+}
+#company-experience1{
+    font-size: 1.4rem;
+    color: black;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 2%;
+    text-align: left;
+}
+#company-package{
+    font-size: 1.4rem;
+    color: black;
+    padding: 2%;
+    font-weight: 400;
+}
+
+#tipsList{
+    border: 2px solid grey;
+    width: 50%;
+    padding: 3%;
+    background-color: whitesmoke;
+    box-shadow: lightgray;
+    border-radius: 20px;
+}
+
+#profile-button{
+    background-color: #033aa8;
+    color: white;
+    font-size: 1.4rem;
+    padding: 1%;
+}
+#profile-button:hover{
+    background-color: white;
+    color: #033aa8;
+    cursor: pointer;
+}
+
+#question{
+    color: black;
+    font-size: 1.4rem;
+    padding: 2%;
+}
+#answer{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 2%;
+}
+.name-role{
+    display: flex;
+    align-items: center;
+}
+.show-more{
+    background-color: #033aa8;
+    color: white;
+    font-size: 1.3rem;
+    padding: 2%;
+    width: 50%;
+}
+.show-more:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #033aa8;
+}
+.namerole{
+    display: flex;
+    text-align: center;
+}
+.yearpackage{
+    display: flex;
+}
+
+
+.like-button, .save-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.like-button.liked {
+  color: #e11d48; /* rose-600 */
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.save-button.saved {
+  color: #1d4ed8; /* blue-700 */
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.ig-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ig-like,
+.ig-save {
+  font-size: 22px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ig-like.liked {
+  color: red;
+  transform: scale(1.2);
+}
+
+.ig-save.saved {
+  color: #1d4ed8;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.ig-action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ig-like, .ig-save {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.ig-like.liked {
+  color: red;
+  transform: scale(1.2);
+}
+
+.ig-save.saved {
+  color: #1d4ed8;
+  transform: scale(1.1);
+}

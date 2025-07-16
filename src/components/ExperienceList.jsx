@@ -22,7 +22,6 @@ function ExperienceList() {
 
       <button onClick={() => window.open(URL, '_blank')}>View Profile</button>
 
-      {/* QA Section */}
       {QAList.map((qa, idx) => (
         <div key={idx} className="qa-block">
           <h5>Q{idx + 1}: {qa.question}</h5>

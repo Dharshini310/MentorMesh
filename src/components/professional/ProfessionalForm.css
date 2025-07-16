@@ -9,14 +9,13 @@ body{
   height: 100vh;
 }
 
-/* Layout: Form + Animation */
 .professionalanimation{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items:center;
 }
-/* Form Styling */
+
 .form {
   min-width: 300px;
   max-width: 500px;
@@ -26,7 +25,7 @@ body{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Inputs and textarea */
+
 .form-input,
 .exp {
   width: 100%;
@@ -47,27 +46,26 @@ body{
   border: 2px solid #ccc; 
   border-radius: 8px;
   background-color: white;
-  color: #092b9c; /* Blue text */
-  appearance: none; /* Optional: remove default arrow styling */
+  color: #092b9c; 
+  appearance: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%23092b9c'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 20px;
 }
 
-/* Textarea */
 .exp {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Placeholder styling */
+
 ::placeholder {
   font-size: 1.1rem;
   color: #033aa8;
 }
 
-/* Submit button */
+
 .form-button {
   width: 50%;
   background-color: #092b9c;
